@@ -21,12 +21,13 @@ class EmployeesListItem extends Component {
 		}));
 	};
 	render() {
-		const { name, salary } = this.props;
+		const { name, salary, onDelete } = this.props;
 		const ListClass = classNames({
 			"list-group-item d-flex justify-content-between": true,
 			increase: this.state.increase,
 			like: this.state.star,
 		});
+
 		return (
 			<li className={ListClass}>
 				<span onClick={this.onStar} className="list-group-item-label">
@@ -38,7 +39,7 @@ class EmployeesListItem extends Component {
 						<i className="fas fa-cookie"></i>
 					</button>
 
-					<button type="button" className="btn-trash btn-sm ">
+					<button onClick={onDelete} type="button" className="btn-trash btn-sm ">
 						<i className="fas fa-trash"></i>
 					</button>
 					<i className="fas fa-star"></i>
