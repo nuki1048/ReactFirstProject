@@ -77,15 +77,16 @@ class App extends Component {
 		this.setState({ filter });
 	};
 
-	onChangeSalary = (id, value) => {
-		this.setState(({ data }) => {
-			data.map((item) => {
+	onChangeSalary = (id, salary) => {
+		const SalaryValue = +salary;
+		this.setState(({ data }) => ({
+			data: data.map((item) => {
 				if (item.id === id) {
-					return { ...item, salary: value };
+					return { ...item, salary: SalaryValue };
 				}
 				return item;
-			});
-		});
+			}),
+		}));
 	};
 	render() {
 		const { data, term, filter } = this.state;
