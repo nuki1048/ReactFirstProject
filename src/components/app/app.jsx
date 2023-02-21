@@ -7,7 +7,7 @@ import AppFilter from "../app-filter/app-filter";
 import EmployeesList from "../employees-list/employees-list";
 import EmployeesAddForm from "../employees-add-form/employees-add-form";
 
-import "./app.css";
+import "./app.scss";
 class App extends Component {
 	// eslint-disable-next-line no-useless-constructor
 	constructor(props) {

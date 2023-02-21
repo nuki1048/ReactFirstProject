@@ -1,4 +1,4 @@
-import "./search-panel.css";
+import "./search-panel.scss";
 import { Component } from "react";
 class SearchPanel extends Component {
 	// eslint-disable-next-line no-useless-constructor
